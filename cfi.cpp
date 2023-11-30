@@ -16,9 +16,11 @@ void load_script(const char* filename, bool show_script = false) {
         while (getline(file, line)) {
             std::cout << line << '\n';
         }
+    } else {
 
-    } else
-    {
+        file.seekg(0, std::ios::end);
+        std::streampos fileSize = file.tellg();
+
         std::cout << "El string " << filename << " tiene " << file.tellg() << " bytes.\n";
 
     }
