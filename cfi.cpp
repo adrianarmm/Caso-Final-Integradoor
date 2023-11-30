@@ -16,3 +16,9 @@ void load_script(const char* filename, bool show_script = false) {
         while (getline(file, line)) {
             std::cout << line << '\n';
         }
+
+    } else {
+
+    }
+    file.close();
+}
