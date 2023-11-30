@@ -20,10 +20,13 @@ void load_script(const char* filename, bool show_script = false) {
 
         file.seekg(0, std::ios::end);
         std::streampos fileSize = file.tellg();
+        if (fileSize == -1) {
+            std::cout << "No se puede obtener el tamaño del archivo " << filename << ".\n";
+            file.close();
+            return;
+        }
 
-        std::cout << "El string " << filename << " tiene " << file.tellg() << " bytes.\n";
 
-    }
     file.close();
 }
 
