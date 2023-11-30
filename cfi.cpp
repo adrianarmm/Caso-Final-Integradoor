@@ -40,7 +40,7 @@ void load_script() {
 
 int main() {
     load_script("cfi.cpp", true);
-    load_script("Algoritmos.cpp", true);
+
 
 std::string string;
 std::cout << "Introduce el nombre del string para mostrar su contenido: ";
