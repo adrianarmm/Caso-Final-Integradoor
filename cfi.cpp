@@ -47,5 +47,9 @@ std::cout << "Introduce el nombre del string para mostrar su contenido: ";
 std::cin >> string;
 load_script(string.c_str(), true);
 
+std::cout << "Introduce el nombre del string para mostrar su tamaño: ";
+std::cin >> string;
+load_script(string.c_str());
+
 return 0;
 }
