@@ -37,7 +37,7 @@ int main() {
     load_script();
     return 0;
 }
-
+int main() {
 std::string string;
 std::cout << "Introduce el nombre del string para mostrar su contenido: ";
 std::cin >> string;
