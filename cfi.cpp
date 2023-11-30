@@ -37,7 +37,13 @@ void load_script() {
 
     load_script(filename.c_str());
 }
+void load_script(bool show_script) {
+    std::string filename;
+    std::cout << "Introduce el tamaño del string: ";
+    std::cin >> filename;
 
+    load_script(filename.c_str(), show_script);
+}
 int main() {
     load_script("cfi.cpp", true);
 
