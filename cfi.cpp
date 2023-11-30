@@ -17,9 +17,9 @@ void load_script(const char* filename, bool show_script = false) {
             std::cout << line << '\n';
         }
 
-    } else {
-
-
+    } else
+    {
+        std::cout << "El string " << filename << " tiene " << file.tellg() << " bytes.\n";
     }
     file.close();
 }
