@@ -25,7 +25,10 @@ void load_script(const char* filename, bool show_script = false) {
             file.close();
             return;
         }
-
+        std::cout << "El archivo " << filename << " tiene " << fileSize << " bytes.\n";
+    }
+    file.close();
+}
 
     file.close();
 }
