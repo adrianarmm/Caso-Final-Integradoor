@@ -19,6 +19,7 @@ void load_script(const char* filename, bool show_script = false) {
 
     } else {
 
+
     }
     file.close();
 }
@@ -32,3 +33,7 @@ void load_script() {
 }
 
 int main() {
+    load_script("cfi.cpp", true);
+    load_script();
+    return 0;
+}
