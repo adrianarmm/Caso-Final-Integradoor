@@ -30,3 +30,5 @@ void load_script() {
 
     load_script(filename.c_str());
 }
+
+int main() {
