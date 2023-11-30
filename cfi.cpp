@@ -2,24 +2,25 @@
 #include <fstream>
 #include <string>
 
-void load_script(const char* filename, bool show_script = false) {
-    std::ifstream file(filename);
+void load_script(const char* hola, bool show_script = false) {
+    std::ifstream file(hola);
 
     if (!file.is_open()) {
-        std::cout << "No se pudo abrir el string " << filename << ".\n";
+        std::cout << "No se pudo abrir el string " << hola << ".\n";
         return;
     }
 
     std::string line;
     if (show_script) {
-        std::cout << "Contenido del string " << filename << ":\n";
+        std::cout << "Contenido del string " << hola << ":\n";
         while (getline(file, line)) {
             std::cout << line << '\n';
         }
 
     } else
     {
-        std::cout << "El string " << filename << " tiene " << file.tellg() << " bytes.\n";
+        std::cout << "El string " << hola << " tiene " << file.tellg() << " bytes.\n";
+
     }
     file.close();
 }
@@ -34,10 +35,8 @@ void load_script() {
 
 int main() {
     load_script("cfi.cpp", true);
-    load_script();
-    return 0;
-}
-int main() {
+    load_script("Algoritmos.cpp", true);
+
 std::string string;
 std::cout << "Introduce el nombre del string para mostrar su contenido: ";
 std::cin >> string;
