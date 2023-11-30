@@ -30,9 +30,6 @@ void load_script(const char* filename, bool show_script = false) {
     file.close();
 }
 
-    file.close();
-}
-
 void load_script() {
     std::string filename;
     std::cout << "Introduce el nombre del string: ";
