@@ -41,3 +41,8 @@ std::string archivo;
 std::cout << "Introduce el nombre del archivo para mostrar su contenido: ";
 std::cin >> archivo;
 load_script(archivo.c_str(), true); // Carga y muestra el contenido del archivo proporcionado
+
+load_script(); // Solicita el nombre del archivo y lo carga
+
+return 0;
+}
