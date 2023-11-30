@@ -6,13 +6,13 @@ void load_script(const char* filename, bool show_script = false) {
     std::ifstream file(filename);
 
     if (!file.is_open()) {
-        std::cout << "No se pudo abrir el archivo " << filename << ".\n";
+        std::cout << "No se pudo abrir el string " << filename << ".\n";
         return;
     }
 
     std::string line;
     if (show_script) {
-        std::cout << "Contenido del archivo " << filename << ":\n";
+        std::cout << "Contenido del string " << filename << ":\n";
         while (getline(file, line)) {
             std::cout << line << '\n';
         }
@@ -26,7 +26,7 @@ void load_script(const char* filename, bool show_script = false) {
 
 void load_script() {
     std::string filename;
-    std::cout << "Introduce el nombre del archivo: ";
+    std::cout << "Introduce el nombre del string: ";
     std::cin >> filename;
 
     load_script(filename.c_str());
@@ -37,12 +37,11 @@ int main() {
     load_script();
     return 0;
 }
-std::string archivo;
-std::cout << "Introduce el nombre del archivo para mostrar su contenido: ";
-std::cin >> archivo;
-load_script(archivo.c_str(), true); // Carga y muestra el contenido del archivo proporcionado
 
-load_script(); // Solicita el nombre del archivo y lo carga
+std::string string;
+std::cout << "Introduce el nombre del string para mostrar su contenido: ";
+std::cin >> string;
+load_script(string.c_str(), true);
 
 return 0;
 }
